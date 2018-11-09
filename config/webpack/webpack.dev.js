@@ -5,11 +5,10 @@ const base = require('./webpack.base');
 module.exports = merge(base, {
   mode: 'development',
   devtool: 'eval-source-map',
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ],
+  plugins: [new webpack.HotModuleReplacementPlugin()],
   devServer: {
     contentBase: './dist',
-    hot: true
+    hot: true,
+    open: true
   }
 });

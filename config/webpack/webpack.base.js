@@ -13,7 +13,7 @@ module.exports = {
       },
       {
         test: /\.(eot|svg|otf|ttf|woff|woff2)$/,
-        use: 'file-loader',
+        use: 'file-loader'
       },
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
@@ -28,14 +28,14 @@ module.exports = {
               },
               // optipng.enabled: false will disable optipng
               optipng: {
-                enabled: false,
+                enabled: false
               },
               pngquant: {
                 quality: '65-90',
                 speed: 4
               },
               gifsicle: {
-                interlaced: false,
+                interlaced: false
               },
               // the webp option will enable WEBP
               webp: {
@@ -47,20 +47,20 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        use: 'html-loader',
+        use: 'html-loader'
       },
       {
         test: /\.json$/,
-        use: 'json-loader',
+        use: 'json-loader'
       },
       {
         test: /\.(mp4|webm)$/,
         use: {
           loader: 'url-loader',
           options: {
-            limit: 10000,
-          },
-        },
+            limit: 10000
+          }
+        }
       }
     ]
   },
@@ -80,8 +80,8 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-      },
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+      }
     })
   ]
 };

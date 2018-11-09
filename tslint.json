@@ -1,14 +1,13 @@
 {
-	"defaultSeverity": "error",
-	"extends": [
-		"tslint:latest",
-		"tslint-react",
-		"tslint-config-prettier"
-	],
-	"jsRules": {},
-	"rules": {},
-	"rulesDirectory": [],
-	"linterOptions": {
-		"exclude": ["**/node_modules/**"]
-	}
+  "defaultSeverity": "error",
+  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
+  "jsRules": {},
+  "rules": {
+    "prettier": true,
+    "no-unused-variable": true
+  },
+  "rulesDirectory": ["tslint-plugin-prettier"],
+  "linterOptions": {
+    "exclude": ["**/node_modules/**"]
+  }
 }
