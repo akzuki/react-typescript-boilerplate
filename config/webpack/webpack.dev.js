@@ -9,6 +9,10 @@ module.exports = merge(base, {
   devServer: {
     contentBase: './dist',
     hot: true,
-    open: true
+    open: true,
+    port: 8000,
+    overlay: true,
+    compress: true,
+    historyApiFallback: true
   }
 });
